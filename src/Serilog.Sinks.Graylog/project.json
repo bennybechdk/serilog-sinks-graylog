@@ -1,0 +1,32 @@
+﻿{
+  "version": "1.0.0-*",
+  "authors": [ "Anton Volkov" ],
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "Newtonsoft.Json": "9.0.1",
+    "Serilog": "2.1.0"
+  },
+
+  "buildOptions": {
+    "keyFile": "./key.snk",
+    "publicSign": true,
+    "warningsAsErrors": true,
+    "optimize": true
+
+  },
+  "frameworks": {
+    "net45": {
+    },
+    "net452": {
+    },
+    "net46": {
+    },
+    "net461": {
+    }
+  },
+  "scripts": {
+    "postcompile": [
+      "dotnet pack --no-build --configuration %compile:Configuration%"
+    ]
+  }
+}
